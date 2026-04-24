@@ -11,6 +11,7 @@ require("dotenv").config();
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var tasksRouter = require('./routes/tasks');
+var aiTaskRouter = require('./routes/ai-task');
 
 
 const mongoose = require("mongoose");
@@ -37,6 +38,7 @@ app.use(cors({origin: "*",credentials: true}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/tasks', tasksRouter);
+app.use('/ai-task', aiTaskRouter);
 
 
 // catch 404 and forward to error handler
